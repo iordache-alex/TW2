@@ -1,0 +1,406 @@
+#menu__toggle {
+    opacity: 0;
+   
+  }
+  #menu__toggle:checked + .menu__btn > span {
+    transform: rotate(45deg);
+    
+  }
+  #menu__toggle:checked + .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    left: 0 !important;
+   
+  }
+  .menu__btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 3;
+    
+  }
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ff0000;
+    transition-duration: .25s;
+  
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+   
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+  .menu__box {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #ECEFF1;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    transition-duration: .25s;
+    z-index: 2;
+  }
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+    z-index: 2;
+  }
+  .menu__item:hover {
+    background-color: #CFD8DC;
+  }
+
+.main-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+.main-header .logo {
+   order: 3;
+   margin-left: auto;
+   margin-bottom: auto;
+}
+
+.main-header .navbar {
+    
+    background-color: #333; /* Background color of the navigation bar */
+    overflow: hidden;
+    order: 1;
+    margin-right: auto;
+    margin-top: auto;
+}
+
+.main-header .navbar a {
+    
+    color: white; /* Text color of the navigation links */
+    text-align: center;
+    padding: 1px 5px 1px; /* Adjust padding as needed */
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.main-header .navbar a:hover {
+    background-color: #ddd; /* Background color on hover */
+    color: black; /* Text color on hover */
+}
+
+.main-header .navbar a.active {
+    background-color: rgb(177, 51, 51); /* Background color of the active link */
+    color: white; /* Text color of the active link */
+}
+.main-header .title {
+    font-size: 36px; /* Adjust the font size as needed */
+    color: #ffffff; /* Text color of the title */
+    font-family: 'Bookman Old Style', serif; /* Choose your preferred font family */
+    font-weight: bold; /* Adjust font weight as needed */
+    margin-bottom: 30px; /* Adjust margin as needed */
+    order: 2;
+    margin-left: auto;
+}
+.hover07 figure img {
+	-webkit-filter: blur(3px);
+	filter: blur(3px);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover07 figure:hover img {
+	-webkit-filter: blur(0);
+	filter: blur(0);
+}
+.grid-container {
+  display: grid;
+  grid-auto-columns: 100%;
+  grid-template-rows: repeat(2,minmax(50px, 1fr));
+  grid-gap: 10px;
+}
+
+.grid-item {
+  text-align: left; 
+  max-width: 100%;
+}
+
+.column {
+	margin: 0px 0px 0;
+	padding: 0;
+}
+.column:last-child {
+	padding-bottom: 0px;
+}
+.column::after {
+	content: '';
+	clear: both;
+	display: block;
+}
+.column div {
+	width: auto;
+	height: 400px;
+	margin: 0 0 0 0px;
+	padding: 0;
+}
+.column div:first-child {
+	margin-left: 0;
+}
+.column div span {
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	z-index: -1;
+	display: block;
+	width: 600px;
+	margin: 0;
+	padding: 0;
+	color: #444;
+	font-size: 18px;
+	text-decoration: none;
+	text-align: center;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	opacity: 0;
+}
+figure {
+  display:block; 
+	height: auto;
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+	background: inherit;
+  z-index: -2;
+}
+figure:hover+span {
+	bottom: -36px;
+	opacity: 1;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(177, 51, 51);
+  font-family: 'Bookman Old Style', serif;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+
+.left {
+  left: 0;
+}
+
+
+.right {
+  left: 50%;
+}
+
+
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+
+.right::after {
+  left: -16px;
+}
+
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+.whiter {
+  color: white;
+}
+
+@media (max-width: 768px) {  /* for mobile */
+    .navbar {
+        display: none;
+        visibility: hidden; 
+    }
+    .navbar a {
+        display:none;
+        visibility: hidden;
+    }
+    .timeline::after {
+      left: 31px;
+      }
+      
+      /* Full-width containers */
+      .container {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+      }
+      
+      /* Make sure that all arrows are pointing leftwards */
+      .container::before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+      }
+    
+      /* Make sure all circles are at the same spot */
+      .left::after, .right::after {
+      left: 15px;
+      }
+      
+      /* Make all right containers behave like the left ones */
+      .right {
+      left: 0%;
+      }
+    }
+@media (min-width: 769px) {  /* for desktop */
+    .hamburger-menu {
+        display:none;
+    }
+
+    .menu__item {
+        display:none;
+    }
+    .menu__box {
+        display:none;
+    }
+    .menu__btn {
+        display:none;
+    }
+}
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 80px 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
